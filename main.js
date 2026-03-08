@@ -1,4 +1,20 @@
 $(document).ready(function() {
+    $('#menu button').click(function() {
+        // scroll to section with id 'booking-form'
+        $('html, body').animate({
+            scrollTop: $('.order-now').offset().top - 150
+        }, 500);
+        return false;
+    });
+    function adjustSloganPosition() {
+        var slogan = $('#header .slogan');
+        slogan.css('top', window.innerHeight / 2 + 'px');
+    }
+    $(window).on('resize', function() {
+        adjustSloganPosition();
+    });
+    adjustSloganPosition();
+
     $(window).on('scroll', function() {
         var sloganH2 = $('#header .slogan h2');
         if (sloganH2.length) {
@@ -153,4 +169,70 @@ $(document).ready(function() {
         dateFormat: "yy-mm-dd",
         minDate: 1
     });
+
+    initBookingForm();
+
+    $('.thumbnail-image').click(function() {
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
+        $('.pool-photo-image').attr('src', $(this).attr('src'));
+    });
+
+    function initBookingForm() {
+        $('#booking-form').submit(function(event) {
+            // Pobierz wartości pól formularza
+            var name = $('#name').val().trim();
+            var email = $('#email').val().trim();
+            var startDate = $('#start-date').val().trim();
+            var endDate = $('#end-date').val().trim();
+            var adults = $('#adults').val();
+            var children = $('#children').val();
+
+            // Prosta walidacja
+            var errors = [];
+
+            if (name === '') {
+                errors.push("Uzupełnij imię i nazwisko.");
+            }
+            if (email === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errors.push("Podaj poprawny adres e-mail.");
+            }
+            if (startDate === '') {
+                errors.push("Wybierz datę przyjazdu.");
+            }
+            if (endDate === '') {
+                errors.push("Wybierz datę wyjazdu.");
+            }
+            if (adults === '' || isNaN(adults)) {
+                errors.push("Wybierz liczbę dorosłych.");
+            }
+            if (children === '' || isNaN(children)) {
+                errors.push("Wybierz liczbę dzieci.");
+            }
+            // Sprawdź czy data przyjazdu jest przed datą wyjazdu
+            if (startDate && endDate) {
+                var sd = new Date(startDate);
+                var ed = new Date(endDate);
+                if (sd >= ed) {
+                    errors.push("Data wyjazdu musi być po dacie przyjazdu.");
+                }
+            }
+
+            // Usuń poprzednie komunikaty o błędach
+            $(".booking-form .form-error").remove();
+
+            if (errors.length > 0) {
+                var $form = $('#booking-form');
+                var $errorBox = $('<div class="form-error" style="color: ' + '#b70606' + '; margin-top: 8px; font-weight: bold;"></div>');
+                $errorBox.html(errors.join("<br>"));
+                $form.prepend($errorBox);
+                event.preventDefault();
+                return false;
+            } else {
+                // Możesz dodać tutaj kod do wysyłania danych AJAX lub dalszych akcji
+                this.reset();
+                return true;
+            }
+        });
+    }
 });

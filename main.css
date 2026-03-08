@@ -78,7 +78,8 @@ a {
   flex: 1;
   text-align: center;
 }
-#header #navbar #menu a {
+#header #navbar #menu a, #header #navbar #menu button {
+  cursor: pointer;
   margin-left: 10px;
   color: #dcdcdc;
   font-size: 1.2em;
@@ -87,7 +88,7 @@ a {
   display: block;
   letter-spacing: 0.02em;
 }
-#header #navbar #menu a:hover {
+#header #navbar #menu a:hover, #header #navbar #menu button:hover {
   transition: text-decoration 0.8s ease;
   text-decoration: underline;
 }
@@ -108,7 +109,15 @@ a {
 #header #navbar.dark {
   transition: background-color 0.4s ease;
   background-color: #383E42;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #C6A25A;
+}
+#header #navbar.dark #navbar-content {
+  padding: 10px 0;
+  transition: padding 0.3s ease;
+}
+#header #navbar.dark .logotype {
+  height: 40px;
+  transition: height 0.3s ease;
 }
 #header .slogan {
   position: absolute;
@@ -161,6 +170,7 @@ section#features #features-content {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #383E42;
   margin: 0 auto;
 }
 section#features #features-content .feature-item {
@@ -170,18 +180,27 @@ section#features #features-content .feature-item {
   align-items: center;
   width: 100%;
   height: 500px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 section#features #features-content .feature-photo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#features #features-content .feature-photo img {
+  max-width: 350px;
+  max-height: 350px;
   width: 100%;
   height: 100%;
-  background-color: #383E42;
-  background-image: url("https://cf.bstatic.com/xdata/images/hotel/max1024x768/723383133.jpg?k=b75dc3772e9c33c20669e24ca80f5b5819055eb2031d14521ac97f55b1ff1daa&o=");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #C6A25A;
 }
 section#features #features-content .feature-text {
-  width: 100%;
+  width: 50%;
   height: 100%;
   background-color: #383E42;
   font-size: 1.2em;
@@ -245,17 +264,16 @@ section.photos #photos-swapper-content .photo-item.highlighted {
   border-radius: 10px;
 }
 
-section#socials #socials-content {
+#socials-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 1200px;
   margin: 0 auto;
-  margin-bottom: 100px;
   padding: 20px 0;
 }
-section#socials #socials-content a {
+#socials-content a {
   float: left;
   margin-left: 100px;
   display: flex;
@@ -263,17 +281,13 @@ section#socials #socials-content a {
   align-items: center;
   justify-content: center;
 }
-section#socials #socials-content a img {
+#socials-content a img {
   opacity: 0.75;
 }
-section#socials #socials-content a {
+#socials-content a {
   text-align: center;
 }
 
-section#opinions h2, section#opinions h3 {
-  line-height: 1;
-  margin: 0;
-}
 section#opinions {
   max-width: 1200px;
   margin: 0 auto;
@@ -305,10 +319,13 @@ section#opinions .opinion-photo {
   border-radius: 50%;
   height: 60px;
   background-color: #383E42;
-  background-image: url("https://domkimilotu.pl/wordpress/wp-content/uploads/2023/01/P-05.jpg");
+  background-image: url("images/rates/f1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+section#opinions .opinion-photo.f2 {
+  background-image: url("images/rates/f2.jpg");
 }
 
 div.header {
@@ -316,12 +333,14 @@ div.header {
   margin: 0 auto;
   margin-bottom: 20px;
 }
-div.header h2 {
-  color: #C6A25A;
-}
-div.header h2, div.header h3 {
+div.header h3 {
   line-height: 1;
   margin: 0;
+}
+div.header h2 {
+  line-height: 1;
+  color: #C6A25A;
+  margin-bottom: 10px;
 }
 
 section#pool #pool-content {
@@ -360,6 +379,7 @@ section#pool .pool-photo .thumbnails .thumbnail-image:hover, section#pool .pool-
   border: 2px solid #C6A25A;
 }
 section#pool .pool-photo-image {
+  border: 2px solid #C6A25A;
   max-height: 350px;
   max-width: 350px;
   height: 100%;
@@ -390,9 +410,16 @@ section#pool .pool-text p {
 
 .booking-form {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.booking-form .booking-form-row {
+  display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
 }
 .booking-form label {
@@ -401,7 +428,11 @@ section#pool .pool-text p {
   display: inline-block;
   color: #383E42;
 }
-.booking-form input[type=text],
+.booking-form label span {
+  color: rgb(183, 6, 6);
+  margin-left: 5px;
+}
+.booking-form input,
 .booking-form select {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -417,7 +448,9 @@ section#pool .pool-text p {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1em;
+  line-height: 22px;
   cursor: pointer;
+  margin-top: 24px;
   transition: background-color 0.3s, color 0.3s;
 }
 .booking-form button[type=submit]:hover {
