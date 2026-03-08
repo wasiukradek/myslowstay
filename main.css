@@ -1,0 +1,428 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  letter-spacing: 0.05em;
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #383E42;
+}
+
+.sign {
+  display: flex;
+  flex-direction: row;
+  opacity: 0.5;
+  justify-content: center;
+  margin: 20px auto;
+  margin-top: 80px;
+}
+.sign img {
+  height: 30px;
+}
+
+#header {
+  position: relative;
+}
+#header #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+#header #navbar #navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  padding: 20px 0;
+}
+#header #navbar #logo {
+  max-width: 200px;
+}
+#header #navbar #menu {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+#header #navbar #menu li {
+  flex: 1;
+  text-align: center;
+}
+#header #navbar #menu a {
+  margin-left: 10px;
+  color: #dcdcdc;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding: 0 10px;
+  display: block;
+  letter-spacing: 0.02em;
+}
+#header #navbar #menu a:hover {
+  transition: text-decoration 0.8s ease;
+  text-decoration: underline;
+}
+#header #navbar #menu .button {
+  background-color: #C6A25A;
+  color: #383E42;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(76, 76, 76);
+}
+#header #navbar #menu .button:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #C6A25A;
+  border: 1px solid #383E42;
+  color: #dcdcdc;
+  text-decoration: none;
+}
+#header #navbar.dark {
+  transition: background-color 0.4s ease;
+  background-color: #383E42;
+  border-bottom: 1px solid black;
+}
+#header .slogan {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #dcdcdc;
+  z-index: 1;
+}
+#header #video-container {
+  position: relative;
+}
+#header #video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+section#footer {
+  color: #fff;
+  background-color: #383E42;
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+section#footer #footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+section#footer #footer-content div {
+  width: 33%;
+  text-align: center;
+  align-content: center;
+}
+section#footer #footer-content a {
+  color: #dcdcdc;
+}
+
+section#features #features-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+section#features #features-content .feature-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+section#features #features-content .feature-photo {
+  width: 100%;
+  height: 100%;
+  background-color: #383E42;
+  background-image: url("https://cf.bstatic.com/xdata/images/hotel/max1024x768/723383133.jpg?k=b75dc3772e9c33c20669e24ca80f5b5819055eb2031d14521ac97f55b1ff1daa&o=");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section#features #features-content .feature-text {
+  width: 100%;
+  height: 100%;
+  background-color: #383E42;
+  font-size: 1.2em;
+  align-content: center;
+}
+section#features #features-content .feature-text li {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #dcdcdc;
+  cursor: pointer;
+}
+section#features #features-content .feature-text li:hover {
+  transition: text-decoration 0.8s ease;
+  text-decoration: underline;
+}
+section#features #features-content .feature-text li.selected {
+  padding-left: 0;
+  font-weight: bold;
+  color: #dcdcdc;
+  text-decoration: underline;
+}
+
+section.photos {
+  padding: 70px 0;
+}
+section.photos #photos-swapper-content {
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
+  height: 450px;
+}
+section.photos #photos-swapper-content .photo-item {
+  opacity: 0.5;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 75px;
+  border: 5px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section.photos #photos-swapper-content .photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.photos #photos-swapper-content .photo-item:hover {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  border: 5px solid #C6A25A;
+  border-radius: 10px;
+}
+section.photos #photos-swapper-content .photo-item.highlighted {
+  opacity: 1;
+  width: 400px;
+  height: 400px;
+  margin-top: 25px;
+  border: 5px solid #C6A25A;
+  border-radius: 10px;
+}
+
+section#socials #socials-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 20px 0;
+}
+section#socials #socials-content a {
+  float: left;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#socials #socials-content a img {
+  opacity: 0.75;
+}
+section#socials #socials-content a {
+  text-align: center;
+}
+
+section#opinions h2, section#opinions h3 {
+  line-height: 1;
+  margin: 0;
+}
+section#opinions {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section#opinions #opinions-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  column-gap: 60px;
+}
+section#opinions .opinion-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  column-gap: 30px;
+}
+section#opinions .opinion-item p {
+  line-height: 1.5;
+  font-style: italic;
+}
+section#opinions .opinion-photo {
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  background-color: #383E42;
+  background-image: url("https://domkimilotu.pl/wordpress/wp-content/uploads/2023/01/P-05.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+div.header h2 {
+  color: #C6A25A;
+}
+div.header h2, div.header h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+section#pool #pool-content {
+  background-color: #383E42;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+section#pool .pool-photo {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+section#pool .pool-photo .thumbnails {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+section#pool .pool-photo .thumbnails .thumbnail-image {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  opacity: 0.5;
+  border: 2px solid transparent;
+}
+section#pool .pool-photo .thumbnails .thumbnail-image:hover, section#pool .pool-photo .thumbnails .thumbnail-image.selected {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  cursor: pointer;
+  border: 2px solid #C6A25A;
+}
+section#pool .pool-photo-image {
+  max-height: 350px;
+  max-width: 350px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+section#pool .pool-text {
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+section#pool .pool-text p {
+  color: #dcdcdc;
+  font-size: 1.2em;
+  line-height: 1.5;
+  display: block;
+  padding-right: 20px;
+  max-width: 580px;
+  float: right;
+}
+
+.booking-form-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.booking-form label {
+  font-size: 1em;
+  margin-bottom: 4px;
+  display: inline-block;
+  color: #383E42;
+}
+.booking-form input[type=text],
+.booking-form select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 120px;
+  font-size: 1em;
+  height: 40px;
+}
+.booking-form button[type=submit] {
+  background-color: #C6A25A;
+  color: #383E42;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.booking-form button[type=submit]:hover {
+  background-color: #b5924e;
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

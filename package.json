@@ -1,0 +1,11 @@
+{
+  "name": "myslowstay",
+  "private": true,
+  "scripts": {
+    "build": "sass main.scss main.css",
+    "build:watch": "sass main.scss main.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
