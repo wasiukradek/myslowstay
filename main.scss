@@ -186,6 +186,9 @@ section#footer {
 
         a {
             color: $color-white;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -304,18 +307,28 @@ section.photos {
         width: $max-width;
         margin: 0 auto;
         padding: $padding-l 0;
-        a {
-            float: left;
-            margin-left: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            img {
-                opacity: 0.75;
+        column-gap: $padding-m;
+            > div {
+                padding: 0 $padding-m;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                a {
+                    text-align: center;
+                    margin: auto;
+                }
+                img {
+                    opacity: 0.75;
+                    margin: auto;
+                    display: block;
+                }
+                br {
+                    line-height: 0;
+                }
             }
-            text-align: center;
-        }
+        
     }
 
 section#opinions {
@@ -433,7 +446,7 @@ section#pool {
             display: block;
             // padding-top: $padding-l;
             padding-right: $padding-l;
-            max-width: $max-width/2 - $padding-l;
+            max-width: calc($max-width/2) - $padding-l;
             float: right;
         }
     }
@@ -496,5 +509,14 @@ section#pool {
             background-color: #b5924e;
             color: #fff;
         }
+    }
+}
+.booking-award {
+    margin: 0 auto;
+    text-align: center;
+    img {
+        height: 120px;
+        border: 4px solid $color-gold;
+        border-radius: 10px;
     }
 }

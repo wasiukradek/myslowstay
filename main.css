@@ -164,6 +164,9 @@ section#footer #footer-content div {
 section#footer #footer-content a {
   color: #dcdcdc;
 }
+section#footer #footer-content a:hover {
+  text-decoration: underline;
+}
 
 section#features #features-content {
   display: flex;
@@ -272,20 +275,27 @@ section.photos #photos-swapper-content .photo-item.highlighted {
   width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
+  column-gap: 10px;
 }
-#socials-content a {
-  float: left;
-  margin-left: 100px;
+#socials-content > div {
+  padding: 0 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-#socials-content a img {
-  opacity: 0.75;
-}
-#socials-content a {
   text-align: center;
+}
+#socials-content > div a {
+  text-align: center;
+  margin: auto;
+}
+#socials-content > div img {
+  opacity: 0.75;
+  margin: auto;
+  display: block;
+}
+#socials-content > div br {
+  line-height: 0;
 }
 
 section#opinions {
@@ -456,6 +466,16 @@ section#pool .pool-text p {
 .booking-form button[type=submit]:hover {
   background-color: #b5924e;
   color: #fff;
+}
+
+.booking-award {
+  margin: 0 auto;
+  text-align: center;
+}
+.booking-award img {
+  height: 120px;
+  border: 4px solid #C6A25A;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
