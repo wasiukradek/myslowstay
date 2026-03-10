@@ -36,6 +36,10 @@ body {
 
 ul {
     list-style: none;
+    &.list-bullet {
+        list-style: disc;
+        padding-left: $padding-l;
+    }
 }
 
 a {
@@ -57,6 +61,12 @@ section {
         height: 30px;
     }
 }
+.icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: $padding-s;
+}
+
 #header {
     position: relative;
 
@@ -78,7 +88,10 @@ section {
         #logo {
             max-width: 200px;
         }
-        #menu {
+        .logotype {
+            float: left;
+        }
+        .menu {
             margin: 0;
             padding: 0;
             flex: 1;
@@ -93,7 +106,6 @@ section {
 
             a, button {
                 cursor: pointer;
-                margin-left: $padding-m;
                 color: $color-white;
                 font-size: 1.2em;
                 text-transform: uppercase;
@@ -189,6 +201,20 @@ section#footer {
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+}
+section.text-page {
+    padding-top: 80px;
+    .text-page-content {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: $padding-l;
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
         }
     }
 }
@@ -303,8 +329,9 @@ section.photos {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        width: $max-width;
+        align-items: start;
+        width: 100%;
+        max-width: $max-width;
         margin: 0 auto;
         padding: $padding-l 0;
         column-gap: $padding-m;
@@ -312,12 +339,21 @@ section.photos {
                 padding: 0 $padding-m;
                 display: flex;
                 flex-direction: row;
-                align-items: center;
+                align-items: startcenter;
                 justify-content: center;
                 text-align: center;
                 a {
                     text-align: center;
                     margin: auto;
+                    font-weight: bold;
+                    p {
+                        margin: $padding-s 0;
+                    }
+                    &:hover {
+                        .icon {
+                            color: $color-gold;
+                        }
+                    }
                 }
                 img {
                     opacity: 0.75;
@@ -519,4 +555,51 @@ section#pool {
         border: 4px solid $color-gold;
         border-radius: 10px;
     }
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+    $max-width: 100%;
+    #header .slogan {
+        top: 100px !important;
+    }
+    #header #navbar.dark .logotype {
+        height: 60px;
+    }
+    div.header {
+        padding: 0 $padding-l;
+    }
+    section#opinions #opinions-content {
+        flex-direction: column;
+        padding: 0 $padding-l;
+    }
+    section#footer #footer-content {
+        padding: $padding-l;
+    }
+    section#pool #pool-content {
+        flex-direction: column;
+        padding: $padding-l;
+        .pool-text {
+            width: 100%;
+            p {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 $padding-l;
+                float: none;
+            }
+        }
+    }
+    .booking-form-content {
+        padding: $padding-l;
+        button[type="submit"] {
+            margin-top: 0;
+        }
+    }
+    .desktop-only {
+        display: none;
+    }
+    .booking-award {
+        margin-top: $padding-xl;
+    }
+    
 }

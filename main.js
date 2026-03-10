@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#menu button').click(function() {
+    $('button[data-js-sel="header-order-now"]').click(function() {
         // scroll to section with id 'booking-form'
         $('html, body').animate({
             scrollTop: $('.order-now').offset().top - 150
@@ -229,8 +229,6 @@ $(document).ready(function() {
                 event.preventDefault();
                 return false;
             } else {
-                // Możesz dodać tutaj kod do wysyłania danych AJAX lub dalszych akcji
-                this.reset();
                 return true;
             }
         });
