@@ -123,6 +123,7 @@ section {
                 padding: $padding-m $padding-m;
                 border-radius: 5px;
                 border: 1px solid rgb(76, 76, 76);
+                float: right;
                 &:hover {
                     transition: background-color 0.3s ease, color 0.3s ease;
                     background-color: $color-gold;
@@ -328,6 +329,7 @@ section.photos {
     #socials-content {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: start;
         width: 100%;
@@ -557,9 +559,49 @@ section#pool {
     }
 }
 
-/* Mobile styles */
+@media (max-width: 768px) {
+    .slogan h2 {
+        font-size: 24px;
+    }
+    .slogan h3 {
+        font-size: 20px;
+    }
+    section#footer #footer-content {
+        flex-direction: column;
+        gap: $padding-l;
+        div {
+            width: 100%;
+        }
+    }
+    .pool-photo-image {
+        border: 2px solid $color-gold;
+        max-height: 350px;
+        max-width: 350px;
+    }
+    section#pool .pool-photo {
+        width: 100%;
+    }
+    .booking-form-content {
+        max-width: 100%;
+        padding: $padding-l;
+        display: block;
+    }
+    .booking-form .booking-form-row {
+        flex-direction: column;
+    }
+    // #socials-content > div {
+    //     flex: 0 0 33.333%;
+    // }
+    // #socials-content > div:nth-child(n+4) {
+    //     flex: 0 0 50%;
+    // }
+}
+
 @media (max-width: 1024px) {
     $max-width: 100%;
+    #header #navbar .menu {
+        margin: 0 $padding-l;
+    }
     #header .slogan {
         top: 100px !important;
     }
@@ -568,13 +610,6 @@ section#pool {
     }
     div.header {
         padding: 0 $padding-l;
-    }
-    section#opinions #opinions-content {
-        flex-direction: column;
-        padding: 0 $padding-l;
-    }
-    section#footer #footer-content {
-        padding: $padding-l;
     }
     section#pool #pool-content {
         flex-direction: column;
@@ -588,6 +623,36 @@ section#pool {
                 float: none;
             }
         }
+    }
+    section#features #features-content .feature-item {
+        flex-direction: column;
+        height: auto;
+    }
+    section#features #features-content .feature-text {
+        width: 100%;
+        text-align: center;
+        ul {
+            padding-left: 0;
+            li {
+                padding-left: 0;
+            }
+        }
+    }
+    section#features #features-content .feature-photo {
+        padding-top: $padding-l;
+        width: 100%;
+    }
+
+    section#opinions #opinions-content {
+        flex-direction: column;
+        padding: 0 $padding-l;
+    }
+}
+/* Mobile styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    section#footer #footer-content {
+        padding: $padding-l;
     }
     .booking-form-content {
         padding: $padding-l;

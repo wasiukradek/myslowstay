@@ -110,6 +110,7 @@ a {
   padding: 10px 10px;
   border-radius: 5px;
   border: 1px solid rgb(76, 76, 76);
+  float: right;
 }
 #header #navbar .menu .button:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -297,6 +298,7 @@ section.photos #photos-swapper-content .photo-item.highlighted {
 #socials-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: start;
   width: 100%;
@@ -513,8 +515,41 @@ section#pool .pool-text p {
   border-radius: 10px;
 }
 
-/* Mobile styles */
+@media (max-width: 768px) {
+  .slogan h2 {
+    font-size: 24px;
+  }
+  .slogan h3 {
+    font-size: 20px;
+  }
+  section#footer #footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  section#footer #footer-content div {
+    width: 100%;
+  }
+  .pool-photo-image {
+    border: 2px solid #C6A25A;
+    max-height: 350px;
+    max-width: 350px;
+  }
+  section#pool .pool-photo {
+    width: 100%;
+  }
+  .booking-form-content {
+    max-width: 100%;
+    padding: 20px;
+    display: block;
+  }
+  .booking-form .booking-form-row {
+    flex-direction: column;
+  }
+}
 @media (max-width: 1024px) {
+  #header #navbar .menu {
+    margin: 0 20px;
+  }
   #header .slogan {
     top: 100px !important;
   }
@@ -523,13 +558,6 @@ section#pool .pool-text p {
   }
   div.header {
     padding: 0 20px;
-  }
-  section#opinions #opinions-content {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-  section#footer #footer-content {
-    padding: 20px;
   }
   section#pool #pool-content {
     flex-direction: column;
@@ -543,6 +571,34 @@ section#pool .pool-text p {
     max-width: 100%;
     padding: 0 20px;
     float: none;
+  }
+  section#features #features-content .feature-item {
+    flex-direction: column;
+    height: auto;
+  }
+  section#features #features-content .feature-text {
+    width: 100%;
+    text-align: center;
+  }
+  section#features #features-content .feature-text ul {
+    padding-left: 0;
+  }
+  section#features #features-content .feature-text ul li {
+    padding-left: 0;
+  }
+  section#features #features-content .feature-photo {
+    padding-top: 20px;
+    width: 100%;
+  }
+  section#opinions #opinions-content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+/* Mobile styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section#footer #footer-content {
+    padding: 20px;
   }
   .booking-form-content {
     padding: 20px;
