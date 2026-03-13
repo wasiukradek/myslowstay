@@ -48,7 +48,6 @@ a {
 }
 
 section {
-    // border: 1px solid red;
 }
 .sign {
     display: flex;
@@ -566,6 +565,9 @@ section#pool {
     .slogan h3 {
         font-size: 20px;
     }
+    #header #navbar .menu .button {
+        font-size: 1em;
+    }
     section#footer #footer-content {
         flex-direction: column;
         gap: $padding-l;
@@ -588,6 +590,16 @@ section#pool {
     }
     .booking-form .booking-form-row {
         flex-direction: column;
+        width: 100%;
+        input, select {
+            width: 100%;
+        }
+        button[type="submit"] {
+            width: 100%;
+        }
+        > div {
+            width: 100%;
+        }
     }
     // #socials-content > div {
     //     flex: 0 0 33.333%;
@@ -598,6 +610,15 @@ section#pool {
 }
 
 @media (max-width: 1024px) {
+    .booking-form-content {
+        padding: $padding-l;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+        button[type="submit"] {
+            // margin-top: 0;
+        }
+    }
     $max-width: 100%;
     #header #navbar .menu {
         margin: 0 $padding-l;
@@ -619,7 +640,7 @@ section#pool {
             p {
                 width: 100%;
                 max-width: 100%;
-                padding: 0 $padding-l;
+                // padding: 0 $padding-l;
                 float: none;
             }
         }
@@ -648,17 +669,12 @@ section#pool {
         padding: 0 $padding-l;
     }
 }
-/* Mobile styles */
+
+/* Tablet styles */
 @media (min-width: 768px) and (max-width: 1024px) {
     
     section#footer #footer-content {
         padding: $padding-l;
-    }
-    .booking-form-content {
-        padding: $padding-l;
-        button[type="submit"] {
-            margin-top: 0;
-        }
     }
     .desktop-only {
         display: none;

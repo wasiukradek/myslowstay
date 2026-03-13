@@ -53,8 +53,16 @@ $(document).ready(function() {
 
             var animationDuration = 400; // ms
 
-            var highlightedWidth = 400;
-            var defaultWidth = 300;
+            if (window.innerWidth < 550) {
+                var highlightedWidth = 200;
+                var defaultWidth = 100;
+            } else if (window.innerWidth < 768) {   
+                var highlightedWidth = 300;
+                var defaultWidth = 200;
+            } else {
+                var highlightedWidth = 400;
+                var defaultWidth = 300;
+            }
 
             // Build widths array
             var widths = [];
