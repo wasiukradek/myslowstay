@@ -558,6 +558,9 @@ section#pool .pool-text p {
   .booking-form .booking-form-row > div {
     width: 100%;
   }
+  section.photos #photos-swapper-content {
+    height: 360px;
+  }
 }
 @media (max-width: 1024px) {
   .booking-form-content {
@@ -623,6 +626,11 @@ section#pool .pool-text p {
   }
   .booking-award {
     margin-top: 40px;
+  }
+}
+@media (max-width: 550px) {
+  section.photos #photos-swapper-content {
+    height: 260px;
   }
 }
 
