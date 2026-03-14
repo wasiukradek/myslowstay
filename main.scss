@@ -335,7 +335,7 @@ section.photos {
         max-width: $max-width;
         margin: 0 auto;
         padding: $padding-l 0;
-        column-gap: $padding-m;
+        gap: $padding-m;
             > div {
                 padding: 0 $padding-m;
                 display: flex;
@@ -683,6 +683,12 @@ section#pool {
 }
 
 @media (max-width: 550px) {
+    .sign {
+        margin-top: $padding-l;
+    }
+    section.photos {
+        padding: $padding-xl 0;
+    }
     section.photos #photos-swapper-content {
         height: 260px;
     }

@@ -52,13 +52,15 @@ $(document).ready(function() {
             var containerWidth = $container.width();
 
             var animationDuration = 400; // ms
-
+            var spacing = 100;  // px
             if (window.innerWidth < 550) {
                 var highlightedWidth = 200;
                 var defaultWidth = 100;
+                spacing = 30;
             } else if (window.innerWidth < 768) {   
                 var highlightedWidth = 300;
                 var defaultWidth = 200;
+                spacing = 75;
             } else {
                 var highlightedWidth = 400;
                 var defaultWidth = 300;
@@ -78,7 +80,6 @@ $(document).ready(function() {
             var leftOfClicked = (containerWidth - highlightedWidth) / 2;
             // Walk left from clickedIndex to get left position for the very first item
             var startLeft = leftOfClicked;
-            var spacing = 100;
             for (var i = clickedIndex - 1; i >= 0; i--) {
                 startLeft -= widths[i] + spacing;
             }

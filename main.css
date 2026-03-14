@@ -305,7 +305,7 @@ section.photos #photos-swapper-content .photo-item.highlighted {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
-  column-gap: 10px;
+  gap: 10px;
 }
 #socials-content > div {
   padding: 0 10px;
@@ -629,6 +629,12 @@ section#pool .pool-text p {
   }
 }
 @media (max-width: 550px) {
+  .sign {
+    margin-top: 20px;
+  }
+  section.photos {
+    padding: 40px 0;
+  }
   section.photos #photos-swapper-content {
     height: 260px;
   }
