@@ -97,9 +97,10 @@ section {
             align-items: center;
             display: flex;
             flex-direction: row;
+            gap: $padding-l;
             // max-width: 900px;
             li {
-                flex: 1;
+                // flex: 1;
                 text-align: center;
             }
 
@@ -108,12 +109,19 @@ section {
                 color: $color-white;
                 font-size: 1.2em;
                 text-transform: uppercase;
-                padding: 0 $padding-m;
+                // padding: 0 $padding-m;
                 display: block;
                 letter-spacing: 0.02em;
                 &:hover {
                     transition: text-decoration 0.8s ease;
                     text-decoration: underline;
+                }
+            }
+            .marketplace-link {
+                flex: 0 0 44px;
+                // padding: 0 $padding-m;
+                &.make-space {
+                    margin-left: auto;
                 }
             }
             .button {
@@ -351,14 +359,16 @@ section.photos {
                         margin: $padding-s 0;
                     }
                     &:hover {
+                        color: $color-gold;
                         .icon {
                             color: $color-gold;
                         }
                     }
                 }
                 img {
-                    opacity: 0.75;
+                    // opacity: 0.75;
                     margin: auto;
+                    border-radius: 5px;
                     display: block;
                 }
                 br {
@@ -665,6 +675,9 @@ section#pool {
         flex-direction: column;
         padding: 0 $padding-l;
     }
+    .desktop-only {
+        display: none;
+    }
 }
 
 /* Tablet styles */
@@ -672,9 +685,6 @@ section#pool {
     
     section#footer #footer-content {
         padding: $padding-l;
-    }
-    .desktop-only {
-        display: none;
     }
     .booking-award {
         margin-top: $padding-xl;
@@ -691,5 +701,10 @@ section#pool {
     }
     section.photos #photos-swapper-content {
         height: 260px;
+    }
+}
+@media (min-width: 1024px) {
+    .mobile-only {
+        display: none;
     }
 }

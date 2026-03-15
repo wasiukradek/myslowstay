@@ -1,6 +1,15 @@
 <html lang="pl">
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQZ1M5X5Y8"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-TQZ1M5X5Y8');
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MySlowStay</title>
 	<link rel="stylesheet" href="main.css" />
@@ -25,11 +34,17 @@
 					<ul class="menu">
 						<li><a href="index.html"><img class="logotype" src="images/my_slow_stay_white.png"
 									height="60"></a></li>
-						<li class="desktop-only"><a href="index.html">&nbsp;</a></li>
+						<!-- <li class="desktop-only"><a href="index.html">&nbsp;</a></li> -->
 						<!-- <li class="desktop-only"><a href="index.html">&nbsp;</a></li>
 						<li class="desktop-only"><a href="index.html">&nbsp;</a></li>
 						<li class="desktop-only"><a href="index.html">&nbsp;</a></li> -->
-						<li><button type="button" class="button" data-js-sel="header-order-now">ZAPYTAJ O REZERWACJĘ</button></li>
+						<li  class="marketplace-link make-space"><a href="https://www.instagram.com/my_slow_stay/" target="_blank"><img src="images/icons/instagram.png"></a></li>
+						<li class="marketplace-link"><a href="https://www.airbnb.com/rooms/1441230049170380053" target="_blank"><img src="images/icons/airbnb_white.png"></a></li>
+						<li  class="marketplace-link"><a href="https://www.booking.com/hotel/pl/domki-milotu.pl.html" target="_blank"><img src="images/icons/booking_blue.png"></a></li>
+						<li><button type="button" class="button" data-js-sel="header-order-now">
+							<span class="desktop-only">ZAPYTAJ O REZERWACJĘ</span>
+							<span class="mobile-only">Zarezerwuj</span>
+						</button></li>
 					</ul>
 				</div>
 			</div>
@@ -79,21 +94,27 @@
 		<section id="socials">
 			<div id="socials-content">
 				<div>
-					<a href="https://www.booking.com/hotel/pl/domki-milotu.pl.html">
-						<div class="icon"><i class="fa-solid fa-hotel icon"></i></div>
+					<a href="https://www.booking.com/hotel/pl/domki-milotu.pl.html" target="_blank">
+						<div class="icon">
+							<img src="images/icons/booking_blue.png">
+						</div>
 						<p>Booking</p>
 						<img src="images/stars.svg" height="20">
 					</a>
 				</div>
 				<div>
-					<a href="https://www.facebook.com/myslowstay/">
-						<div class="icon"><i class="fa-brands fa-airbnb icon"></i></div>
+					<a href="https://www.airbnb.com/rooms/1441230049170380053" target="_blank">
+						<div class="icon">
+							<img src="images/icons/airbnb_white.png">
+						</div>
 						<p>Airbnb</p>
 						<img src="images/stars.svg" height="20">
 					</a>
 				</div>
-				<div><a href="https://www.instagram.com/domki_milotu/">
-					<div class="icon"><i class="fa-brands fa-instagram icon"></i></div>
+				<div><a href="https://www.instagram.com/my_slow_stay/" target="_blank">
+					<div class="icon">
+						<img src="images/icons/instagram.png">
+					</div>
 					<p>Instagram</p>
 					</a>
 				</div>
@@ -295,15 +316,19 @@
 						<h3>Lub zarezerwuj na</h3>
 						<div id="socials-content">
 							<div>
-								<a href="https://www.booking.com/hotel/pl/domki-milotu.pl.html">
-									<div class="icon"><i class="fa-solid fa-hotel icon"></i></div>
+								<a href="https://www.booking.com/hotel/pl/domki-milotu.pl.html" target="_blank">
+									<div class="icon">
+										<img src="images/icons/booking_blue.png">
+									</div>
 									<p>Booking</p>
 									<img src="images/stars.svg" height="20">
 								</a>
 							</div>
 							<div>
-								<a href="https://www.facebook.com/myslowstay/">
-									<div class="icon"><i class="fa-brands fa-airbnb icon"></i></div>
+								<a href="https://www.airbnb.com/rooms/1441230049170380053" target="_blank">
+									<div class="icon">
+										<img src="images/icons/airbnb_white.png">
+									</div>
 									<p>Airbnb</p>
 									<img src="images/stars.svg" height="20">
 								</a>

@@ -86,9 +86,9 @@ a {
   align-items: center;
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 #header #navbar .menu li {
-  flex: 1;
   text-align: center;
 }
 #header #navbar .menu a, #header #navbar .menu button {
@@ -96,13 +96,18 @@ a {
   color: #dcdcdc;
   font-size: 1.2em;
   text-transform: uppercase;
-  padding: 0 10px;
   display: block;
   letter-spacing: 0.02em;
 }
 #header #navbar .menu a:hover, #header #navbar .menu button:hover {
   transition: text-decoration 0.8s ease;
   text-decoration: underline;
+}
+#header #navbar .menu .marketplace-link {
+  flex: 0 0 44px;
+}
+#header #navbar .menu .marketplace-link.make-space {
+  margin-left: auto;
 }
 #header #navbar .menu .button {
   background-color: #C6A25A;
@@ -323,12 +328,15 @@ section.photos #photos-swapper-content .photo-item.highlighted {
 #socials-content > div a p {
   margin: 5px 0;
 }
+#socials-content > div a:hover {
+  color: #C6A25A;
+}
 #socials-content > div a:hover .icon {
   color: #C6A25A;
 }
 #socials-content > div img {
-  opacity: 0.75;
   margin: auto;
+  border-radius: 5px;
   display: block;
 }
 #socials-content > div br {
@@ -615,14 +623,14 @@ section#pool .pool-text p {
     flex-direction: column;
     padding: 0 20px;
   }
+  .desktop-only {
+    display: none;
+  }
 }
 /* Tablet styles */
 @media (min-width: 768px) and (max-width: 1024px) {
   section#footer #footer-content {
     padding: 20px;
-  }
-  .desktop-only {
-    display: none;
   }
   .booking-award {
     margin-top: 40px;
@@ -637,6 +645,11 @@ section#pool .pool-text p {
   }
   section.photos #photos-swapper-content {
     height: 260px;
+  }
+}
+@media (min-width: 1024px) {
+  .mobile-only {
+    display: none;
   }
 }
 
