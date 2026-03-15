@@ -106,7 +106,7 @@ a {
 #header #navbar .menu .marketplace-link {
   flex: 0 0 44px;
 }
-#header #navbar .menu .marketplace-link.make-space {
+#header #navbar .menu .make-space {
   margin-left: auto;
 }
 #header #navbar .menu .button {

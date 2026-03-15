@@ -120,9 +120,9 @@ section {
             .marketplace-link {
                 flex: 0 0 44px;
                 // padding: 0 $padding-m;
-                &.make-space {
-                    margin-left: auto;
-                }
+            }
+            .make-space {
+                margin-left: auto;
             }
             .button {
                 background-color: $color-gold;
