@@ -8,12 +8,22 @@ $(document).ready(function() {
     });
     function adjustSloganPosition() {
         var slogan = $('#header .slogan');
-        slogan.css('top', window.innerHeight / 2 + 'px');
+        slogan.show();
+        var videoContainerHeight = $('#video-container').innerHeight();
+        console.log(videoContainerHeight, window.innerHeight, slogan.innerHeight());
+        var top = (videoContainerHeight - slogan.innerHeight()) / 2;
+        if (videoContainerHeight > window.innerHeight) {
+            top = (window.innerHeight - slogan.innerHeight()) / 2;
+        }
+        slogan.css('top', top + 'px');
     }
     $(window).on('resize', function() {
         adjustSloganPosition();
     });
     adjustSloganPosition();
+    $('#video-container video').on('loadedmetadata', function() {
+        adjustSloganPosition();
+    });
 
     $(window).on('scroll', function() {
         var sloganH2 = $('#header .slogan h2');

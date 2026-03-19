@@ -156,6 +156,7 @@ section {
     }
 
     .slogan {
+        display: none;
         position: absolute;
         top: 50%;
         left: 0;
@@ -175,6 +176,9 @@ section {
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
+        }
+        video {
+            width: 100%;
         }
     }
 }
@@ -570,10 +574,10 @@ section#pool {
 
 @media (max-width: 768px) {
     .slogan h2 {
-        font-size: 24px;
+        font-size: 30px;
     }
     .slogan h3 {
-        font-size: 20px;
+        font-size: 26px;
     }
     #header #navbar .menu .button {
         font-size: 1em;
@@ -614,6 +618,13 @@ section#pool {
     section.photos #photos-swapper-content {
         height: 360px;
     }
+    #header #video-container {
+        height: 700px;
+        video {
+            height: 700px;
+            width: initial;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -631,7 +642,7 @@ section#pool {
         margin: 0 $padding-l;
     }
     #header .slogan {
-        top: 100px !important;
+        // top: 100px !important;
     }
     #header #navbar.dark .logotype {
         height: 60px;

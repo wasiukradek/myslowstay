@@ -138,6 +138,7 @@ a {
   transition: height 0.3s ease;
 }
 #header .slogan {
+  display: none;
   position: absolute;
   top: 50%;
   left: 0;
@@ -156,6 +157,9 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+#header #video-container video {
+  width: 100%;
 }
 
 section#footer {
@@ -525,10 +529,10 @@ section#pool .pool-text p {
 
 @media (max-width: 768px) {
   .slogan h2 {
-    font-size: 24px;
+    font-size: 30px;
   }
   .slogan h3 {
-    font-size: 20px;
+    font-size: 26px;
   }
   #header #navbar .menu .button {
     font-size: 1em;
@@ -569,6 +573,13 @@ section#pool .pool-text p {
   section.photos #photos-swapper-content {
     height: 360px;
   }
+  #header #video-container {
+    height: 700px;
+  }
+  #header #video-container video {
+    height: 700px;
+    width: initial;
+  }
 }
 @media (max-width: 1024px) {
   .booking-form-content {
@@ -579,9 +590,6 @@ section#pool .pool-text p {
   }
   #header #navbar .menu {
     margin: 0 20px;
-  }
-  #header .slogan {
-    top: 100px !important;
   }
   #header #navbar.dark .logotype {
     height: 60px;
