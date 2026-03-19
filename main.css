@@ -575,6 +575,8 @@ section#pool .pool-text p {
   }
   #header #video-container {
     height: 700px;
+    overflow: hidden;
+    object-fit: cover;
   }
   #header #video-container video {
     height: 700px;

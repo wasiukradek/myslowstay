@@ -620,6 +620,8 @@ section#pool {
     }
     #header #video-container {
         height: 700px;
+        overflow: hidden;
+        object-fit: cover;
         video {
             height: 700px;
             width: initial;
