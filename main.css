@@ -36,13 +36,19 @@ a {
   color: #383E42;
 }
 
+section {
+  border: 0px solid red;
+}
+
 .sign {
+  border: 0px solid red;
   display: flex;
   flex-direction: row;
   opacity: 0.5;
   justify-content: center;
-  margin: 20px auto;
-  margin-top: 80px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .sign img {
   height: 30px;
@@ -167,7 +173,6 @@ section#footer {
   background-color: #383E42;
   display: flex;
   flex-direction: row;
-  margin-top: 80px;
 }
 section#footer #footer-content {
   display: flex;
@@ -313,7 +318,7 @@ section.photos #photos-swapper-content .photo-item.highlighted {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0;
   gap: 10px;
 }
 #socials-content > div {
@@ -390,6 +395,7 @@ section#opinions .opinion-photo.f2 {
 div.header {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 div.header h3 {
@@ -397,6 +403,7 @@ div.header h3 {
   margin: 0;
 }
 div.header h2 {
+  margin-top: 0;
   line-height: 1;
   color: #C6A25A;
   margin-bottom: 10px;
@@ -520,6 +527,8 @@ section#pool .pool-text p {
 .booking-award {
   margin: 0 auto;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .booking-award img {
   height: 120px;
@@ -649,6 +658,7 @@ section#pool .pool-text p {
 @media (max-width: 550px) {
   .sign {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   section.photos {
     padding: 40px 0;
