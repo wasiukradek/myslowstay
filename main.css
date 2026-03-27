@@ -537,6 +537,9 @@ section#pool .pool-text p {
 }
 
 @media (max-width: 768px) {
+  .slogan {
+    padding: 0 20px;
+  }
   .slogan h2 {
     font-size: 30px;
   }

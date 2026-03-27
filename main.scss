@@ -575,11 +575,14 @@ section#pool {
 }
 
 @media (max-width: 768px) {
-    .slogan h2 {
-        font-size: 30px;
-    }
-    .slogan h3 {
-        font-size: 26px;
+    .slogan {
+        padding: 0 $padding-l;
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            font-size: 26px;
+        }
     }
     #header #navbar .menu .button {
         font-size: 1em;
