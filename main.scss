@@ -272,7 +272,12 @@ section#features {
             background-color: $color-anthracite;
             font-size: 1.2em;
             align-content: center;
+            h3 {
+                color: $color-white;
+                margin: 0;
+            }
             li {
+                list-style: disc;
                 padding-left: $padding-l;
                 padding-top: $padding-s;
                 padding-bottom: $padding-s;
