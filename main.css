@@ -153,19 +153,28 @@ section {
   color: #dcdcdc;
   z-index: 1;
 }
+#header #image-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("images/dzialka/dzialka_oferta.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 #header #video-container {
   position: relative;
 }
-#header #video-container .overlay {
+#header #video-container video {
+  width: 100%;
+}
+#header .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-#header #video-container video {
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 section#footer {
@@ -512,7 +521,14 @@ section#pool .pool-text p {
   font-size: 1em;
   height: 40px;
 }
-.booking-form button[type=submit] {
+
+.check-offer {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button[type=submit], a.primary {
   background-color: #C6A25A;
   color: #383E42;
   border: none;
@@ -524,7 +540,7 @@ section#pool .pool-text p {
   margin-top: 24px;
   transition: background-color 0.3s, color 0.3s;
 }
-.booking-form button[type=submit]:hover {
+button[type=submit]:hover, a.primary:hover {
   background-color: #b5924e;
   color: #fff;
 }
@@ -539,6 +555,111 @@ section#pool .pool-text p {
   height: 120px;
   border: 4px solid #C6A25A;
   border-radius: 10px;
+}
+
+.amenities-tags ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+.amenities-tags ul li {
+  list-style: none;
+  background-color: #ececec;
+  border: 1px solid #383E42;
+  font-size: 0.8em;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.offer-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.offer-section .offer-section-text {
+  width: 40%;
+}
+.offer-section .offer-section-text a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.offer-section .offer-section-text .offer-pricing {
+  width: 330px;
+  margin: auto;
+}
+.offer-section .offer-section-text .offer-pricing h3 {
+  text-align: center;
+}
+.offer-section .offer-section-text #socials-content {
+  margin-top: 40px;
+}
+.offer-section .offer-section-text h2 {
+  margin-top: 0;
+}
+.offer-section .offer-section-text h3 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+.offer-section .offer-section-text li {
+  list-style: disc;
+  padding: 5px 0;
+}
+.offer-section .offer-section-text table {
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+}
+.offer-section .offer-section-text table th, .offer-section .offer-section-text table td {
+  border: 1px solid #C6A25A;
+  padding: 5px;
+}
+.offer-section .offer-section-text table .first-col {
+  text-align: left;
+  width: 250px;
+}
+.offer-section .offer-section-text table .second-col {
+  text-align: center;
+  width: 100px;
+}
+.offer-section .offer-section-photos {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.offer-section .offer-section-photos .photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.offer-section .offer-section-photos .photos a {
+  flex: 1 1 calc(33.333% - 6.6666666667px);
+  max-width: calc(33.333% - 6.6666666667px);
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.offer-section .offer-section-photos .photos img {
+  border: 5px solid #ececec;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+}
+.offer-section .offer-section-photos .photos img:hover {
+  border: 5px solid #C6A25A;
+  transition: border 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -652,6 +773,15 @@ section#pool .pool-text p {
   }
   .desktop-only {
     display: none;
+  }
+  .offer-section {
+    flex-direction: column;
+  }
+  .offer-section .offer-section-text {
+    width: 100%;
+  }
+  .offer-section .offer-section-photos {
+    width: 100%;
   }
 }
 /* Tablet styles */

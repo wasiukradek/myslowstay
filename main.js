@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': false,
+        'maxHeight': (window.innerHeight - 150)
+    });
+    
     $('button[data-js-sel="header-order-now"]').click(function() {
         // scroll to section with id 'booking-form'
         $('html, body').animate({
@@ -10,7 +16,7 @@ $(document).ready(function() {
         var slogan = $('#header .slogan');
         slogan.show();
         var videoContainerHeight = $('#video-container').innerHeight();
-        console.log(videoContainerHeight, window.innerHeight, slogan.innerHeight());
+
         var top = (videoContainerHeight - slogan.innerHeight()) / 2;
         if (videoContainerHeight > window.innerHeight) {
             top = (window.innerHeight - slogan.innerHeight()) / 2;
@@ -42,7 +48,7 @@ $(document).ready(function() {
     function initFeatures() {
         var featuresContent = $('#features-content');
         var featuresItems = featuresContent.find('.feature-text li');
-        console.log(featuresItems);
+
         $(featuresItems).click(function() {
             $(featuresItems).removeClass('selected');
             $(this).addClass('selected');

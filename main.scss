@@ -1,6 +1,8 @@
 // Colors:
 // antracytowy - #333333
 $color-anthracite: #383E42;
+$color-grey: #dcdcdc;
+$color-light-grey: #ececec;
 $color-white: #dcdcdc;
 $color-gold: #C6A25A;
 $color-red: rgb(183, 6, 6);
@@ -169,20 +171,29 @@ section {
         z-index: 1;
     }
 
+    #image-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background-image: url('images/dzialka/dzialka_oferta.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     #video-container {
         position: relative;
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
         video {
             width: 100%;
         }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -548,23 +559,27 @@ section#pool {
         font-size: 1em;
         height: 40px;
     }
+}
+.check-offer {
+    text-align: center;
+    margin-top: $padding-l;
+    margin-bottom: $padding-xl;
+}
+button[type="submit"], a.primary {
+    background-color: $color-gold;
+    color: $color-anthracite;
+    border: none;
+    padding: $padding-m $padding-l;
+    border-radius: 5px;
+    font-size: 1em;
+    line-height: 22px;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: background-color 0.3s, color 0.3s;
 
-    button[type="submit"] {
-        background-color: $color-gold;
-        color: $color-anthracite;
-        border: none;
-        padding: $padding-m $padding-l;
-        border-radius: 5px;
-        font-size: 1em;
-        line-height: 22px;
-        cursor: pointer;
-        margin-top: 24px;
-        transition: background-color 0.3s, color 0.3s;
-
-        &:hover {
-            background-color: #b5924e;
-            color: #fff;
-        }
+    &:hover {
+        background-color: #b5924e;
+        color: #fff;
     }
 }
 .booking-award {
@@ -576,6 +591,113 @@ section#pool {
         height: 120px;
         border: 4px solid $color-gold;
         border-radius: 10px;
+    }
+}
+
+.amenities-tags {
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: $padding-m;
+        list-style: none;
+        padding-left: 0;
+        li {
+            list-style: none;
+            background-color: #ececec;
+            border: 1px solid $color-anthracite;
+            font-size: 0.8em;
+            padding: 4px;
+            border-radius: 5px;
+        }
+    }
+}
+.offer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: $padding-l;
+    .offer-section-text {
+        width: 40%;
+        a {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .offer-pricing {
+            width: 330px;
+            margin: auto;
+            h3 {
+                text-align: center;
+            }
+        }
+        #socials-content {
+            margin-top: $padding-xl;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        li {
+            list-style: disc;
+            padding: $padding-s 0;
+        }
+        table {
+            border-collapse: collapse;
+            overflow: hidden;
+            margin-bottom: $padding-l;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            display: block;
+            th, td {
+                border: 1px solid $color-gold;
+                padding: $padding-s;
+            }
+            .first-col {
+                text-align: left;
+                width: 250px;
+            }
+            .second-col {
+                text-align: center;
+                width: 100px;
+            }
+        }
+    }
+    .offer-section-photos {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: $padding-l;
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $padding-m;
+            justify-content: flex-start;
+
+            a {
+                flex: 1 1 calc(33.333% - #{$padding-m * 2 / 3});
+                max-width: calc(33.333% - #{$padding-m * 2 / 3});
+                margin-bottom: $padding-m;
+                box-sizing: border-box;
+            }
+            img {
+                border: 5px solid $color-light-grey;
+                object-fit: cover;
+                border-radius: 8px;
+                width: 100%;
+                max-width: 200px;
+                &:hover {
+                    border: 5px solid $color-gold;
+                    transition: border 0.3s ease;
+                }
+            }
+        }
     }
 }
 
@@ -700,6 +822,16 @@ section#pool {
     }
     .desktop-only {
         display: none;
+    }
+
+    .offer-section {
+        flex-direction: column;
+        .offer-section-text {
+            width: 100%;
+        }
+        .offer-section-photos {
+            width: 100%;
+        }
     }
 }
 

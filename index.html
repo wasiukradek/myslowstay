@@ -2,6 +2,7 @@
 
 <head>
 	<!-- Google tag (gtag.js) -->
+	<link href="lightbox/css/lightbox.css" rel="stylesheet" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQZ1M5X5Y8"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
@@ -36,13 +37,13 @@
 									height="60"></a></li>
 						<!-- <li class="desktop-only"><a href="index.html">&nbsp;</a></li> -->
 						<!-- <li class="desktop-only"><a href="index.html">&nbsp;</a></li>
-						<li class="desktop-only"><a href="index.html">&nbsp;</a></li>
 						<li class="desktop-only"><a href="index.html">&nbsp;</a></li> -->
-						<!-- <li  class="marketplace-link make-space"><a href="https://www.instagram.com/my_slow_stay/" target="_blank"><img src="images/icons/instagram.png"></a></li> -->
-						<!-- <li class="marketplace-link"><a href="https://www.airbnb.com/rooms/1441230049170380053" target="_blank"><img src="images/icons/airbnb_white.png"></a></li> -->
-						<!-- <li  class="marketplace-link"><a href="https://www.booking.com/hotel/pl/domki-milotu.pl.html" target="_blank"><img src="images/icons/booking_blue.png"></a></li> -->
-						<li class="make-space"><button type="button" class="button" data-js-sel="header-order-now">
-							<span class="desktop-only">ZAPYTAJ O REZERWACJĘ</span>
+						<li class="make-space">&nbsp;</li>
+						<li class="desktop-only"><a class="menu-link" href="index.html">STRONA GŁÓWNA</a></li>
+						<li class="desktop-only"><a class="menu-link" href="oferta.html">OFERTA</a></li>
+						<li>
+							<button type="button" class="button" data-js-sel="header-order-now">
+							<span class="desktop-only">ZAREZERWUJ</span>
 							<span class="mobile-only">Zarezerwuj</span>
 						</button></li>
 					</ul>
@@ -62,26 +63,26 @@
 			<div id="photos-swapper-content">
 				<div class="photo-item">
 					<img height="300"
-						src="images/dzialka/dzialka1.jpg"
+						src="images/dzialka/dzialka2_800.jpg"
 						alt="Photo 1">
 				</div>
 				<div class="photo-item">
 					<img height="300"
-					src="images/dzialka/dzialka7.png"
+					src="images/dzialka/dzialka3_800.jpg"
 						alt="Photo 1">
 				</div>
 				<div class="photo-item" class="highlighted">
 					<img height="300"
-					src="images/dzialka/dzialka2.jpg"
+					src="images/dzialka/dzialka4_800.jpg"
 						alt="Photo 1">
 				</div>
 				<div class="photo-item">
-					<img height="300" src="images/dzialka/dzialka3.jpg"
+					<img height="300" src="images/dzialka/dzialka5_800.jpg"
 						alt="Photo 1">
 				</div>
 				<div class="photo-item">
 					<img height="300"
-					src="images/dzialka/dzialka4.jpg"
+					src="images/dzialka/dzialka6_800.jpg"
 						alt="Photo 1">
 				</div>
 				<div class="photo-item" class="highlighted">
@@ -236,6 +237,7 @@
 				</div>
 			</div>
 		</section>
+		<div class="check-offer"><a href="oferta.html" class="primary">Zobacz więcej</a></div>
 		<div class="sign">
 			<img src="images/sign.png" height="50">
 			<img src="images/sign.png" height="50">
@@ -256,7 +258,7 @@
 					</p>
 				</div>
 				<div class="pool-photo">
-					<img src="images/pool/pool1.jpg" class="pool-photo-image">
+					<a href="images/pool/pool1.jpg" data-lightbox="pool1"><img src="images/pool/pool1.jpg" class="pool-photo-image"></a>
 					<div class="thumbnails">
 						<img src="images/pool/pool1.jpg" class="thumbnail-image selected">
 						<img src="images/pool/pool2.jpg" class="thumbnail-image">
@@ -426,4 +428,5 @@
 		</section>
 	</div>
 	<script src="main.js"></script>
+	<script src="lightbox/js/lightbox.js"></script>
 </body>
