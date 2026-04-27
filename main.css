@@ -153,6 +153,13 @@ section {
   color: #dcdcdc;
   z-index: 1;
 }
+#header .slogan.small-slogan {
+  display: flex;
+  align-items: center;
+  top: 0%;
+  height: 100%;
+  justify-content: center;
+}
 #header #image-container {
   position: relative;
   width: 100%;

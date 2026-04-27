@@ -169,6 +169,13 @@ section {
         text-align: center;
         color: $color-white;
         z-index: 1;
+        &.small-slogan {
+            display: flex;
+            align-items: center;
+            top: 0%;
+            height: 100%;
+            justify-content: center;
+        }
     }
 
     #image-container {
